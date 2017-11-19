@@ -23,9 +23,10 @@
     <script>
       var map;
       function initMap() {
+        var latlong = {lat: 50.990263, lng: 15.232410};
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 50.990263, lng: 15.232410},
-          zoom: 6,
+          center: latlong,
+          zoom: 5,
           styles: [
             {
               "elementType": "geometry",
@@ -186,6 +187,12 @@
               ]
             }
           ]
+        });
+
+        var marker = new google.maps.Marker({
+          position: latlong,
+          map: map,
+          title: 'Srbská'
         });
       }
     </script>
